@@ -22,10 +22,12 @@ INSERT INTO productos (id_producto, id_fabricante, nombre_producto, fecha_lanzam
 VALUES(1, 1, 'Producto X', '2020-01-01'),(2, 2, 'Producto Y', '2019-12-01'), (3, 3, 'Producto Z', '2021-05-15'); 
 
 -- 6 a)Crear un índice compuesto en las columnas id_fabricante y nombre_producto de la tabla productos.
-create index id_fabricante_y_nombre_producto  on productos (id_fabricante, nombre_producto);
-
+create index idx_productos_id_fabricante_nombre  on productos (id_fabricante, nombre_producto);
+show index from productos;
 -- b) Crear un índice único en la columna id_producto de la tabla productos.
 create index id_producto on productos (id_producto);
 
 -- c) Modificar el índice idx_productos_id_fabricante_nombre para que sea  único en la columna id_fabricante.
-alter index  idx_productos_id_fabricante_nombre on id_fabricante;
+create index idx_productos_id_fabricante_nombre on ;
+
+
